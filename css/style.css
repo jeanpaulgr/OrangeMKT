@@ -81,6 +81,7 @@ p {
     align-items:center;
     justify-content: center;
     background-color: #4E73DF;
+    z-index: 999;
 }
 
 /* MAIN MENU  */
@@ -91,7 +92,7 @@ p {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
     padding: 0 1.5rem;
     position: fixed;
     top: 0;
@@ -174,6 +175,7 @@ p {
     align-items: center;
     justify-content: center;
     padding-top: 50px;
+    z-index: 991;
 }
 .hero .container {
     display: flex;
@@ -233,6 +235,9 @@ p {
     /* padding-bottom: 4rem; */
     /* padding-bottom: 4rem; */
     overflow:hidden;
+    z-index: 992;
+    display: flex;
+    flex-direction: column;
 }
 
 .title-section {
@@ -251,7 +256,7 @@ p {
     flex-wrap: wrap;    
     background: #FFAE55;
     flex-direction: column;
-    margin-top:15px
+    
 }
 .section-services .container .box-services {
     /* width: 25%; */
@@ -259,16 +264,20 @@ p {
     height: 1027px;
 }
 .section-services .container .box-nosotros {
-    /* width: 25%; */
-    padding: 2rem;
-    height: 1027px;
+    /* height: 700px; */
     background-color: #04211F;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
 }
+
 .section-services .container .box-contacto {
     /* width: 25%; */
     padding: 2rem;
     height: 1212px;
     background-color: #ffae55;
+    z-index:992;
 }
 .section-services .container .box-services .box-image-services {
     /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07); */
@@ -291,9 +300,9 @@ p {
     border: solid 15px #FFAE55;
     background-color: white;
     max-height: 100%;
-    width: 55%;
+    width: 65%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     border-radius: 10px;
     padding: 2rem;
@@ -303,8 +312,9 @@ p {
     /* border: 1px white solid; */
     cursor: pointer;
     /* transform: rotate(5deg); */
-    margin-top: 142px;
+    margin-top: 42px;
     flex-direction: column;
+    z-index: 991;
 }
 .section-services .container .box-contacto .box-image-contacto {
     /* box-shadow: 0 10px 40px rgb(0 0 0 / 7%); */
@@ -392,14 +402,14 @@ img.img-responsive.fifty{
     height: 171px;
 }
 img.img-responsive.naranjasA{
-    width: 30%;
+    /* width: 30%;
     position: relative;
-    top: -252px;
+    top: -252px; */
 }
 img.img-responsive.naranjasB{
-    width: 30%;
+    /* width: 30%;
     position: relative;
-    top: -252px;
+    top: -252px; */
 }
 img.img-responsive.enviar{
     width: 30%;
@@ -572,7 +582,7 @@ img.naranjasA{
 }
 .section-services .container .box-nosotros .box-image-nosotros:hover {
     box-shadow: 0 20px 40px -20px rgba(78, 114, 223, 0.5);
-    border: 1px #4E73DF solid;
+    border: 15px #e8563a solid;
 }
 
 .section-services .container .box-services .box-image-services img {
@@ -780,6 +790,7 @@ button.btn-enviar:focus,
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 992;
 }
 .footer-left{
     width: 33%;
@@ -824,15 +835,23 @@ button.btn-enviar:focus,
 
 @media screen and (max-width: 768px) {
     /* MOBILE MENÚ */
+    .main-menu{
+        position: absolute;
+    }
+    .section-services .container .box-nosotros .box-image-nosotros {
+        width: 90%;
+    }
     .logotipo {
         text-align: center;
         margin: auto;
         padding: 1rem 0;
-        width: 100%;
+        /* margin-left: 0px; */
+        /* width: 100%; */
     }
     .logotipo img {
         position: relative;
         top: 5px;
+        margin-left: 0px !important;
     }
     .menu-link-desktop {
         display: none;
@@ -844,7 +863,7 @@ button.btn-enviar:focus,
         position: fixed;
         bottom: 0;
         left: 0;
-        background-color: #4E73DF;
+        background: linear-gradient(90deg, rgba(236,46,32,1) 0%, rgba(249,52,9,1) 0%, rgba(246,180,16,1) 100%);
         width: 100%;
         box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, 0.1);
     }
@@ -861,9 +880,69 @@ button.btn-enviar:focus,
         font-size:35px
     }
     .section-services .container .box-services {
-        width: 50%;
+        width: 100%;
     }
-
+    
+    /* ---------------------------------------------------------------------------- */
+    /* tamaño de cuadro y sombra */
+    figure.box-image-services.first{
+        width: 600px !important;
+    }
+    /* para el primer cuadro naranjo */
+    figure.box-image-services.first .first{
+        /* position: relative; */
+        top: -55px !important;
+        left: -65px;
+    }
+    /* para el primer cuadro sombra */
+    figure.box-image-services.first .first-sombra{
+        top: -47px !important;
+        left: -1217px;
+    }
+    /* para el primer cuadro Texto */
+    figure.box-image-services.first .titulo-first h2{
+        font-size: 35px;
+    left: -562px;
+    top: 24px;
+    }
+    /* para el primer icono */
+    figure.box-image-services.first .icono-first{
+        left: -581px;
+        top: -113px !important;
+        width: 133px;
+    }
+    /* ---------------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------------- */
+    /* tamaño de cuadro y sombra */
+    figure.box-image-services.second{
+        width: 600px !important;
+    }
+    /* para el primer cuadro naranjo */
+    figure.box-image-services.second .second{
+        /* position: relative; */
+        top: -179px !important;
+        left: -27px;
+    }
+    /* para el primer cuadro sombra */
+    figure.box-image-services.second .second-sombra{
+        z-index: 997;
+        left: -1160px;
+        top: -165px !important;
+        transform: rotate(5deg);
+    }
+    /* para el primer cuadro Texto */
+    figure.box-image-services.second .titulo-second h2{
+        font-size: 35px;
+        left: -715px;
+        top: -61px;
+    }
+    /* para el primer icono */
+    figure.box-image-services.second .icono-second{
+        left: -239px;
+        top: -105px !important;
+         width: 133px;
+    }
+        /* ---------------------------------------------------------------------------- */
     /* BENEFITS SECTION */
     .section-benefits {
         flex-direction: column;
@@ -1065,3 +1144,17 @@ height: 30px;
     width: 60px;
     /* height: 78px; */
   }
+
+  .nosotros-left {
+    width: 30%;
+    position: fixed;
+    top: 0%;
+    z-index: 990;
+}
+.nosotros-rigth {
+    width: 30%;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 990;
+}
